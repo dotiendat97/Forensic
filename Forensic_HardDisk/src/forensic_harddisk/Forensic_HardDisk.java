@@ -70,6 +70,7 @@ public class Forensic_HardDisk implements FileFilter{
             System.out.print("Nhập lựa chọn: ");
             chon = sc.nextInt();
             sc.nextLine();
+            if (chon!=1 && chon !=2) break;
             System.out.print("Nhập chuỗi cần tìm trong file: ");
             kiemtra = sc.nextLine();
             switch(chon)
@@ -104,13 +105,7 @@ public class Forensic_HardDisk implements FileFilter{
                         else break;
                     } while(!a);
                     Forensic.fetchChild(f,kiemtra);
-                    break;
-                case 3:
-                    flag = false;
-                    break;
-                default:
-                    flag = false;
-                    break;           
+                    break;          
             }
         }
     }
